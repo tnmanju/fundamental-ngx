@@ -4,9 +4,10 @@ import { IconModule } from '../icon/icon.module';
 import { UtilsModule } from '../utils/utils.module';
 
 import { CalendarComponent } from './calendar.component';
+import { Calendar2Component } from './calendar2/calendar2.component';
 
 @NgModule({
-    declarations: [CalendarComponent],
+    declarations: [CalendarComponent, Calendar2Component],
     imports: [CommonModule, IconModule, UtilsModule],
     exports: [CalendarComponent]
 })
