@@ -75,12 +75,36 @@ export class DatePickerComponent implements OnInit, OnDestroy, ControlValueAcces
 
     @Input() validate: boolean = true;
 
+    /** Aria label for the datepicker input. */
+    @Input()
+    dateInputLabel: string = 'Date input';
+
+    /** Aria label for the button to show/hide the calendar. */
+    @Input()
+    displayCalendarToggleLabel: string = 'Display calendar toggle';
+
     @Input()
     disableFunction = function(d): boolean {
         return false;
     };
     @Input()
     blockFunction = function(d): boolean {
+        return false;
+    };
+    @Input()
+    disableRangeStartFunction = function(d): boolean {
+        return false;
+    };
+    @Input()
+    disableRangeEndFunction = function(d): boolean {
+        return false;
+    };
+    @Input()
+    blockRangeStartFunction = function(d): boolean {
+        return false;
+    };
+    @Input()
+    blockRangeEndFunction = function(d): boolean {
         return false;
     };
 
@@ -131,10 +155,9 @@ export class DatePickerComponent implements OnInit, OnDestroy, ControlValueAcces
         this.closeCalendar();
     }
 
-    @HostListener('document:click', ['$event.path'])
-    public onGlobalClick(targetElementPath: Array<any>) {
-        const elementRefInPath = targetElementPath.find(e => e === this.eRef.nativeElement);
-        if (!elementRefInPath) {
+    @HostListener('document:click', ['$event'])
+    public onGlobalClick(event: MouseEvent) {
+        if (!this.eRef.nativeElement.contains(event.target)) {
             this.closeCalendar();
         }
     }
