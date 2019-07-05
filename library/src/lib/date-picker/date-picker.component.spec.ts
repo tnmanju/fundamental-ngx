@@ -4,7 +4,9 @@ import { CalendarComponent } from '../calendar/calendar.component';
 import { DatePickerComponent } from './date-picker.component';
 import { PopoverModule } from '../popover/popover.module';
 import { IconModule } from '../icon/icon.module';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
+import { Component } from '@angular/core';
+import { DatePickerModule } from './date-picker.module';
 
 describe('DatePickerComponent', () => {
     let component: DatePickerComponent;
@@ -101,5 +103,45 @@ describe('DatePickerComponent', () => {
         expect(component.closeCalendar).not.toHaveBeenCalled();
         document.dispatchEvent(new MouseEvent('click'));
         expect(component.closeCalendar).toHaveBeenCalled();
+    });
+});
+@Component({
+    selector: 'fd-form-test-component',
+        template: `
+        <form [formGroup]="customForm">
+            <fd-date-picker id="datePicker" formControlName="date"></fd-date-picker>
+        </form>
+    `
+})
+export class FormTestComponent {
+    allowNull = true;
+
+    customForm = new FormGroup({
+        date: new FormControl({ date: new Date() })
+    });
+}
+
+describe('DatePickerFormTest', () => {
+    let fixture: ComponentFixture<FormTestComponent>,
+        component: FormTestComponent;
+
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [FormTestComponent],
+                imports: [ReactiveFormsModule, DatePickerModule]
+        });
+    }));
+
+    beforeEach(() => {
+        fixture = TestBed.createComponent(FormTestComponent);
+        component = fixture.componentInstance;
+    });
+
+    it('form and controls should be valid and clean by default', () => {
+        const datePickerControl = component.customForm.get('date');
+        expect(datePickerControl.valid).toBeTruthy();
+        expect(component.customForm.valid).toBeTruthy();
+        expect(component.customForm.touched).toBeFalsy();
+        expect(component.customForm.dirty).toBeFalsy();
     });
 });
