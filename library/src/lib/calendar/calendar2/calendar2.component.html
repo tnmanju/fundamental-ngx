@@ -1,11 +1,8 @@
-<fd-calendar2-header [currentlyDisplayed]="currentlyDisplayed"
-                     [(activeView)]="activeView"></fd-calendar2-header>
+<fd-calendar2-header [currentlyDisplayed]="currentlyDisplayed" [(activeView)]="activeView"></fd-calendar2-header>
 <ng-container [ngSwitch]="activeView">
-    <fd-calendar2-day-view *ngSwitchCase="'day'"
-                           [selectedDate]="selectedDate"
-                           [currentlyDisplayed]="currentlyDisplayed"
-                           [startingDayOfWeek]="startingDayOfWeek"></fd-calendar2-day-view>
+    <fd-calendar2-day-view *ngSwitchCase="'day'" [selectedDate]="selectedDate" [currentlyDisplayed]="currentlyDisplayed"
+        [startingDayOfWeek]="startingDayOfWeek"></fd-calendar2-day-view>
     <fd-calendar2-month-view *ngSwitchCase="'month'"></fd-calendar2-month-view>
-    <fd-calendar2-year-view *ngSwitchCase="'year'"></fd-calendar2-year-view>
+    <fd-calendar2-year-view *ngSwitchCase="'year'" (yearClicked)="yearValueChanged($event)"
+        [yearSelected]="yearSelected" [isActive]="isYearViewActive"></fd-calendar2-year-view>
 </ng-container>
-

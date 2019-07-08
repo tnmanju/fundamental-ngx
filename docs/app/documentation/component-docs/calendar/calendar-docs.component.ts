@@ -4,6 +4,7 @@ import * as calendarRangeSrc from '!raw-loader!./examples/calendar-range-example
 import * as calendarSingleSrc from '!raw-loader!./examples/calendar-single-example.component.ts';
 import * as calendarMondayStartSrc from '!raw-loader!./examples/calendar-monday-start-example.component.ts';
 import * as calendarIntlSrc from '!raw-loader!./examples/calendar-i18n-example.component.ts';
+import * as calendar2Src from '!raw-loader!./examples/calendar2-testing.component.ts';
 
 @Component({
     selector: 'app-calendar',
@@ -15,6 +16,7 @@ export class CalendarDocsComponent implements OnInit {
     calendarRangeSource = calendarRangeSrc;
     calendarMondayStartSource = calendarMondayStartSrc;
     calendari18nTs = calendarIntlSrc;
+    calendar2Ts = calendar2Src;
 
     exampleFunctionsHtml = `Example Disable and Block Functions: 
 
@@ -63,7 +65,7 @@ myDisableFunction = function(d: Date): boolean {
     return d.getTime() > firstDay.getTime() && d.getTime() < lastDay.getTime()
 }`;
 
-    constructor() {}
+    constructor() { }
 
-    ngOnInit() {}
+    ngOnInit() { }
 }

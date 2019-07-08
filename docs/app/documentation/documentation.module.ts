@@ -299,6 +299,7 @@ import { ROUTES } from './documentation.routes';
 import { ComplexTitleExampleComponent } from './component-docs/tabs/examples/complex-title-example/complex-title-example.component';
 import { AddingTabExampleComponent } from './component-docs/tabs/examples/adding-tab-example/adding-tab-example.component';
 import { CalendarI18nExampleComponent } from './component-docs/calendar/examples/calendar-i18n-example.component';
+import { Calendar2TestingComponent } from './component-docs/calendar/examples/calendar2-testing.component';
 import { DatePickerI18nExampleComponent } from './component-docs/date-picker/examples/date-picker-i18n-example.component';
 import { TimeI18nExampleComponent } from './component-docs/time/examples/time-i18n-example.component';
 import { DatePickerFormatExampleComponent } from './component-docs/date-picker/examples/date-picker-format-example.component';
@@ -553,6 +554,7 @@ export function highlightJsFactory() {
         ComplexTitleExampleComponent,
         AddingTabExampleComponent,
         CalendarI18nExampleComponent,
+        Calendar2TestingComponent,
         DatePickerI18nExampleComponent,
         DatePickerFormatExampleComponent
     ],
