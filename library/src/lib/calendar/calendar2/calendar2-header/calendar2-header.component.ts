@@ -22,7 +22,7 @@ export class Calendar2HeaderComponent implements OnInit {
 
     /** Currently displayed date on the calendar. */
     @Input()
-    currentlyDisplayed: CalendarCurrent = { month: new Date().getUTCMonth(), year: new Date().getFullYear() };
+    currentlyDisplayed: CalendarCurrent;
 
     /** Event emitted when the active view should change. */
     @Output()
