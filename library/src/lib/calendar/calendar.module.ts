@@ -14,6 +14,6 @@ import { Calendar2YearViewComponent } from './calendar2/calendar2-views/calendar
     declarations: [CalendarComponent, Calendar2Component, Calendar2HeaderComponent,
         Calendar2DayViewComponent, Calendar2MonthViewComponent, Calendar2YearViewComponent],
     imports: [CommonModule, IconModule, UtilsModule],
-    exports: [CalendarComponent, Calendar2Component]
+    exports: [CalendarComponent, Calendar2Component, Calendar2HeaderComponent]
 })
-export class CalendarModule {}
+export class CalendarModule { }
