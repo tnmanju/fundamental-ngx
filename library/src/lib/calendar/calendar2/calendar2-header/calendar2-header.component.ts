@@ -22,7 +22,7 @@ export class Calendar2HeaderComponent implements OnInit {
 
     /** Currently displayed date on the calendar. */
     @Input()
-    currentlyDisplayed: CalendarCurrent;
+    currentlyDisplayed: CalendarCurrent = { month: new Date().getUTCMonth(), year: new Date().getFullYear() };
 
     /** Event emitted when the active view should change. */
     @Output()
@@ -40,10 +40,10 @@ export class Calendar2HeaderComponent implements OnInit {
         = new EventEmitter<void>();
 
     constructor(public calendarI18nLabels: CalendarI18nLabels,
-                public calendarI18n: CalendarI18n) {
+        public calendarI18n: CalendarI18n) {
     }
 
-    ngOnInit() {}
+    ngOnInit() { }
 
     /** Get the aria label for the previous button. Depends on the active view. */
     get previousLabel(): string {
