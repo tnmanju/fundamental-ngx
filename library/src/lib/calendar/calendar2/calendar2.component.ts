@@ -31,6 +31,9 @@ export class Calendar2Component implements OnInit {
     @Input()
     public startingDayOfWeek: DaysOfWeek = 1;
 
+    yearSelected: number;
+    isYearViewSelected: boolean;
+
     @Output()
     public readonly activeViewChange: EventEmitter<FdCalendarView>
         = new EventEmitter<FdCalendarView>();
@@ -44,19 +47,24 @@ export class Calendar2Component implements OnInit {
     currentlyDisplayed: CalendarCurrent;
 
     constructor(public calendarI18nLabels: CalendarI18nLabels,
-                public calendarI18n: CalendarI18n) {
+        public calendarI18n: CalendarI18n) {
     }
 
     ngOnInit() {
         this.prepareDisplayedView();
     }
 
+    yearValueChanged(yearSelected: number) {
+        console.log(`the year ${yearSelected} was received by the parent component`); //TODO: remove this line.
+        this.activeView = 'day';
+    }
+
     private prepareDisplayedView(): void {
         if (this.selectedDate && this.selectedDate.month && this.selectedDate.year) {
-            this.currentlyDisplayed = {month: this.selectedDate.month, year: this.selectedDate.year};
+            this.currentlyDisplayed = { month: this.selectedDate.month, year: this.selectedDate.year };
         } else {
             const tempDate = FdDate.getToday();
-            this.currentlyDisplayed = {month: tempDate.month, year: tempDate.year};
+            this.currentlyDisplayed = { month: tempDate.month, year: tempDate.year };
         }
     }
 
