@@ -55,7 +55,7 @@ export class Calendar2Component implements OnInit {
     }
 
     yearValueChanged(yearSelected: number) {
-        console.log(`the year ${yearSelected} was received by the parent component`); //TODO: remove this line.
+        console.log(`the year ${yearSelected} was received by the parent component`);
         this.activeView = 'day';
     }
 
