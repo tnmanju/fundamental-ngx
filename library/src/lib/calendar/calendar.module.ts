@@ -12,7 +12,7 @@ import { Calendar2YearViewComponent } from './calendar2/calendar2-views/calendar
 @NgModule({
     declarations: [CalendarComponent, Calendar2Component, Calendar2HeaderComponent,
         Calendar2DayViewComponent, Calendar2MonthViewComponent, Calendar2YearViewComponent],
-    imports: [CommonModule, IconModule, UtilsModule],
+    imports: [CommonModule, IconModule],
     exports: [CalendarComponent, Calendar2Component, Calendar2HeaderComponent]
 })
 export class CalendarModule { }
