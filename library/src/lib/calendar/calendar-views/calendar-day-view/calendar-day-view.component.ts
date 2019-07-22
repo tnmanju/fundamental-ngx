@@ -23,7 +23,10 @@ import { takeUntil } from 'rxjs/operators';
     selector: 'fd-calendar-day-view',
     templateUrl: './calendar-day-view.component.html',
     styleUrls: ['./calendar-day-view.component.scss'],
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None,
+    host: {
+        '[attr.id]': 'id + "-year-view"'
+    }
 })
 export class CalendarDayViewComponent implements OnInit, AfterViewChecked, OnChanges {
 
