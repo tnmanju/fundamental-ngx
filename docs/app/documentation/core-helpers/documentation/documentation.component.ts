@@ -21,6 +21,7 @@ export class DocumentationComponent implements OnInit {
         { url: 'breadcrumb', name: 'Breadcrumb' },
         { url: 'button', name: 'Button' },
         { url: 'buttonGroup', name: 'Button Group' },
+        { url: 'checkbox', name: 'Checkbox' },
         { url: 'splitButton', name: 'Split Button' },
         { url: 'calendar', name: 'Calendar' },
         { url: 'combobox', name: 'Combobox' },

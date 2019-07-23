@@ -382,6 +382,10 @@ import {
 } from './component-docs/textarea/examples/textarea-examples.component';
 import { TextareaFormGroupExampleComponent } from './component-docs/textarea/examples/textarea-form-group-example.component';
 import { TextareaHeaderComponent } from './component-docs/textarea/textarea-header/textarea-header.component';
+import { CheckboxHeaderComponent } from './component-docs/checkbox/checkbox-header/checkbox-header.component';
+import { CheckboxExamplesComponent } from './component-docs/checkbox/examples/checkbox-examples.component';
+import { CheckboxFormGroupExampleComponent } from './component-docs/checkbox/examples/checkbox-form-group-example.component';
+import { CheckboxDocsComponent } from './component-docs/checkbox/checkbox-docs.component';
 
 @NgModule({
     declarations: [
@@ -398,6 +402,7 @@ import { TextareaHeaderComponent } from './component-docs/textarea/textarea-head
         BreadcrumbDocsComponent,
         ButtonDocsComponent,
         ButtonGroupDocsComponent,
+        CheckboxDocsComponent,
         SplitButtonDocsComponent,
         DropdownDocsComponent,
         DatetimePickerDocsComponent,
@@ -469,6 +474,8 @@ import { TextareaHeaderComponent } from './component-docs/textarea/textarea-head
         CalendarRangeExampleComponent,
         CalendarSingleExampleComponent,
         CalendarMondayStartExampleComponent,
+        CheckboxExamplesComponent,
+        CheckboxFormGroupExampleComponent,
         DatePickerRangeExampleComponent,
         DatePickerSingleExampleComponent,
         DatePickerAllowNullExampleComponent,
@@ -648,6 +655,7 @@ import { TextareaHeaderComponent } from './component-docs/textarea/textarea-head
         ButtonGroupHeaderComponent,
         SplitButtonHeaderComponent,
         CalendarHeaderComponent,
+        CheckboxHeaderComponent,
         ComboboxHeaderComponent,
         DatePickerHeaderComponent,
         DatetimePickerHeaderComponent,

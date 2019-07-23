@@ -98,6 +98,8 @@ import { SelectHeaderComponent } from './component-docs/select/select-header/sel
 import { SelectDocsComponent } from './component-docs/select/select-docs.component';
 import { TextareaHeaderComponent } from './component-docs/textarea/textarea-header/textarea-header.component';
 import { TextareaDocsComponent } from './component-docs/textarea/textarea-docs.component';
+import { CheckboxHeaderComponent } from './component-docs/checkbox/checkbox-header/checkbox-header.component';
+import { CheckboxDocsComponent } from './component-docs/checkbox/checkbox-docs.component';
 
 export const ROUTES: Routes = [
     {
@@ -138,6 +140,11 @@ export const ROUTES: Routes = [
             { path: 'calendar', component: CalendarHeaderComponent, children: [
                     { path: '', component: CalendarDocsComponent},
                     { path: 'api', component: ApiComponent, data: {content: API_FILES.calendar}}
+                ]
+            },
+            { path: 'checkbox', component: CheckboxHeaderComponent, children: [
+                    { path: '', component: CheckboxDocsComponent},
+                    { path: 'api', component: ApiComponent, data: {content: API_FILES.form}}
                 ]
             },
             { path: 'combobox', component: ComboboxHeaderComponent, children: [
