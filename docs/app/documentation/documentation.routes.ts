@@ -16,7 +16,6 @@ import { DatePickerDocsComponent } from './component-docs/date-picker/date-picke
 import { DatetimePickerDocsComponent } from './component-docs/datetime-picker/datetime-picker-docs.component';
 import { DropdownDocsComponent } from './component-docs/dropdown/dropdown-docs.component';
 import { FileInputDocsComponent } from './component-docs/file-input/file-input-docs.component';
-import { FormDocsComponent } from './component-docs/form/form-docs.component';
 import { IconDocsComponent } from './component-docs/icon/icon-docs.component';
 import { IdentifierDocsComponent } from './component-docs/identifier/identifier-docs.component';
 import { ImageDocsComponent } from './component-docs/image/image-docs.component';
@@ -56,7 +55,6 @@ import { DatePickerHeaderComponent } from './component-docs/date-picker/date-pic
 import { DatetimePickerHeaderComponent } from './component-docs/datetime-picker/datetime-picker-header/datetime-picker-header.component';
 import { DropdownHeaderComponent } from './component-docs/dropdown/dropdown-header/dropdown-header.component';
 import { FileInputHeaderComponent } from './component-docs/file-input/file-input-header/file-input-header.component';
-import { FormHeaderComponent } from './component-docs/form/form-header/form-header.component';
 import { IconHeaderComponent } from './component-docs/icon/icon-header/icon-header.component';
 import { IdentifierHeaderComponent } from './component-docs/identifier/identifier-header/identifier-header.component';
 import { ImageHeaderComponent } from './component-docs/image/image-header/image-header.component';
@@ -100,6 +98,8 @@ import { TextareaHeaderComponent } from './component-docs/textarea/textarea-head
 import { TextareaDocsComponent } from './component-docs/textarea/textarea-docs.component';
 import { CheckboxHeaderComponent } from './component-docs/checkbox/checkbox-header/checkbox-header.component';
 import { CheckboxDocsComponent } from './component-docs/checkbox/checkbox-docs.component';
+import { RadioHeaderComponent } from './component-docs/radio/radio-header/radio-header.component';
+import { RadioDocsComponent } from './component-docs/radio/radio-docs.component';
 
 export const ROUTES: Routes = [
     {
@@ -170,11 +170,6 @@ export const ROUTES: Routes = [
             { path: 'file-input', component: FileInputHeaderComponent, children: [
                     { path: '', component: FileInputDocsComponent},
                     { path: 'api', component: ApiComponent, data: {content: API_FILES.fileInput}}
-                ]
-            },
-            { path: 'form', component: FormHeaderComponent, children: [
-                    { path: '', component: FormDocsComponent},
-                    { path: 'api', component: ApiComponent, data: {content: API_FILES.form}}
                 ]
             },
             { path: 'icon', component: IconHeaderComponent, children: [
@@ -260,6 +255,11 @@ export const ROUTES: Routes = [
             { path: 'popover-directive', component: PopoverDirectiveHeaderComponent, children: [
                     { path: '', component: PopoverDirectiveDocsComponent},
                     { path: 'api', component: ApiComponent, data: {content: API_FILES.popoverDirective}}
+                ]
+            },
+            { path: 'radio', component: RadioHeaderComponent, children: [
+                    { path: '', component: RadioDocsComponent},
+                    { path: 'api', component: ApiComponent, data: {content: API_FILES.form}}
                 ]
             },
             { path: 'select', component: SelectHeaderComponent, children: [

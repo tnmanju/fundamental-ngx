@@ -48,7 +48,6 @@ import { ActionBarDocsComponent } from './component-docs/action-bar/action-bar-d
 import { PanelDocsComponent } from './component-docs/panel/panel-docs.component';
 import { MenuDocsComponent } from './component-docs/menu/menu-docs.component';
 import { TileDocsComponent } from './component-docs/tile/tile-docs.component';
-import { FormDocsComponent } from './component-docs/form/form-docs.component';
 import { SideNavigationDocsComponent } from './component-docs/side-navigation/side-navigation-docs.component';
 import { PopoverDocsComponent } from './component-docs/popover/popover-docs.component';
 import { CalendarDocsComponent } from './component-docs/calendar/calendar-docs.component';
@@ -108,15 +107,6 @@ import {
     DropdownStateExampleComponent,
     DropdownToolbarExampleComponent
 } from './component-docs/dropdown/examples/dropdown-examples.component';
-import {
-    FormCheckboxExampleComponent,
-    FormExampleComponent,
-    FormInlineHelpExampleComponent,
-    FormRadioExampleComponent,
-    FormSelectExampleComponent,
-    FormStateExampleComponent
-} from './component-docs/form/examples/form-examples.component';
-import { FormGroupInputExampleComponent } from './component-docs/form/examples/form-group-input-example.component';
 import { IconExampleComponent } from './component-docs/icon/examples/icon-example.component';
 import {
     CircleIdentifierExampleComponent,
@@ -278,7 +268,6 @@ import { DatePickerHeaderComponent } from './component-docs/date-picker/date-pic
 import { DatetimePickerHeaderComponent } from './component-docs/datetime-picker/datetime-picker-header/datetime-picker-header.component';
 import { DropdownHeaderComponent } from './component-docs/dropdown/dropdown-header/dropdown-header.component';
 import { FileInputHeaderComponent } from './component-docs/file-input/file-input-header/file-input-header.component';
-import { FormHeaderComponent } from './component-docs/form/form-header/form-header.component';
 import { IconHeaderComponent } from './component-docs/icon/icon-header/icon-header.component';
 import { IdentifierHeaderComponent } from './component-docs/identifier/identifier-header/identifier-header.component';
 import { ImageHeaderComponent } from './component-docs/image/image-header/image-header.component';
@@ -386,6 +375,10 @@ import { CheckboxHeaderComponent } from './component-docs/checkbox/checkbox-head
 import { CheckboxExamplesComponent } from './component-docs/checkbox/examples/checkbox-examples.component';
 import { CheckboxFormGroupExampleComponent } from './component-docs/checkbox/examples/checkbox-form-group-example.component';
 import { CheckboxDocsComponent } from './component-docs/checkbox/checkbox-docs.component';
+import { RadioFormGroupExampleComponent } from './component-docs/radio/examples/radio-form-group-example.component';
+import { RadioExamplesComponent } from './component-docs/radio/examples/radio-examples.component';
+import { RadioDocsComponent } from './component-docs/radio/radio-docs.component';
+import { RadioHeaderComponent } from './component-docs/radio/radio-header/radio-header.component';
 
 @NgModule({
     declarations: [
@@ -407,7 +400,6 @@ import { CheckboxDocsComponent } from './component-docs/checkbox/checkbox-docs.c
         DropdownDocsComponent,
         DatetimePickerDocsComponent,
         FileInputDocsComponent,
-        FormDocsComponent,
         IconDocsComponent,
         IdentifierDocsComponent,
         InlineHelpDocsComponent,
@@ -426,6 +418,7 @@ import { CheckboxDocsComponent } from './component-docs/checkbox/checkbox-docs.c
         PaginationDocsComponent,
         PanelDocsComponent,
         PopoverDocsComponent,
+        RadioDocsComponent,
         CalendarDocsComponent,
         DatePickerDocsComponent,
         SearchInputDocsComponent,
@@ -499,13 +492,6 @@ import { CheckboxDocsComponent } from './component-docs/checkbox/checkbox-docs.c
         FileInputCustomExampleComponent,
         FileInputDragDisabledExampleComponent,
         FileInputMaxExampleComponent,
-        FormCheckboxExampleComponent,
-        FormExampleComponent,
-        FormInlineHelpExampleComponent,
-        FormRadioExampleComponent,
-        FormSelectExampleComponent,
-        FormStateExampleComponent,
-        FormGroupInputExampleComponent,
         IconExampleComponent,
         CircleIdentifierExampleComponent,
         ColorsIdentifierExampleComponent,
@@ -563,6 +549,8 @@ import { CheckboxDocsComponent } from './component-docs/checkbox/checkbox-docs.c
         PopoverProgrammaticComponent,
         PopoverFillComponent,
         PopoverCFillComponent,
+        RadioFormGroupExampleComponent,
+        RadioExamplesComponent,
         ScrollSpyDocsComponent,
         ScrollSpyExampleComponent,
         ScrollSpyCustomExampleComponent,
@@ -661,7 +649,6 @@ import { CheckboxDocsComponent } from './component-docs/checkbox/checkbox-docs.c
         DatetimePickerHeaderComponent,
         DropdownHeaderComponent,
         FileInputHeaderComponent,
-        FormHeaderComponent,
         IconHeaderComponent,
         IdentifierHeaderComponent,
         ImageHeaderComponent,
@@ -678,6 +665,7 @@ import { CheckboxDocsComponent } from './component-docs/checkbox/checkbox-docs.c
         PanelDocsHeaderComponent,
         PopoverHeaderComponent,
         PopoverDirectiveHeaderComponent,
+        RadioHeaderComponent,
         ScrollSpyHeaderComponent,
         SearchInputHeaderComponent,
         SelectHeaderComponent,
