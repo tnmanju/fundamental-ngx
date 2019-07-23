@@ -359,6 +359,29 @@ import { ComboboxAsyncExampleComponent } from './component-docs/combobox/example
 import { ComboboxDisplaywithExampleComponent } from './component-docs/combobox/examples/combobox-displaywith-example.component';
 import { ComboboxDynamicExampleComponent } from './component-docs/combobox/examples/combobox-dynamic-example.component';
 import { ComboboxTemplateExampleComponent } from './component-docs/combobox/examples/combobox-template-example.component';
+import { InputFormGroupExampleComponent } from './component-docs/input/examples/input-form-group-example.component';
+import {
+    InputExampleComponent,
+    InputInlineHelpExampleComponent,
+    InputStateExampleComponent
+} from './component-docs/input/examples/input-examples.component';
+import { InputHeaderComponent } from './component-docs/input/input-header/input-header.component';
+import { InputDocsComponent } from './component-docs/input/input-docs.component';
+import { SelectDocsComponent } from './component-docs/select/select-docs.component';
+import {
+    SelectExampleComponent,
+    SelectInlineHelpExampleComponent,
+    SelectStateExampleComponent
+} from './component-docs/select/examples/select-examples.component';
+import { SelectFormGroupExampleComponent } from './component-docs/select/examples/select-form-group-example.component';
+import { SelectHeaderComponent } from './component-docs/select/select-header/select-header.component';
+import { TextareaDocsComponent } from './component-docs/textarea/textarea-docs.component';
+import {
+    TextareaExampleComponent,
+    TextareaInlineHelpExampleComponent, TextareaStateExampleComponent
+} from './component-docs/textarea/examples/textarea-examples.component';
+import { TextareaFormGroupExampleComponent } from './component-docs/textarea/examples/textarea-form-group-example.component';
+import { TextareaHeaderComponent } from './component-docs/textarea/textarea-header/textarea-header.component';
 
 @NgModule({
     declarations: [
@@ -383,13 +406,16 @@ import { ComboboxTemplateExampleComponent } from './component-docs/combobox/exam
         IconDocsComponent,
         IdentifierDocsComponent,
         InlineHelpDocsComponent,
+        InputDocsComponent,
         InputGroupDocsComponent,
         ImageDocsComponent,
         ListDocsComponent,
         MenuDocsComponent,
         ModalDocsComponent,
+        SelectDocsComponent,
         TabsDocsComponent,
         TableDocsComponent,
+        TextareaDocsComponent,
         TileDocsComponent,
         TreeDocsComponent,
         PaginationDocsComponent,
@@ -492,6 +518,10 @@ import { ComboboxTemplateExampleComponent } from './component-docs/combobox/exam
         InputGroupTextExampleComponent,
         InputGroupTextCompactExampleComponent,
         InputGroupFormExampleComponent,
+        InputFormGroupExampleComponent,
+        InputInlineHelpExampleComponent,
+        InputStateExampleComponent,
+        InputExampleComponent,
         ListActionsExampleComponent,
         ListCheckboxExampleComponent,
         ListExampleComponent,
@@ -529,6 +559,10 @@ import { ComboboxTemplateExampleComponent } from './component-docs/combobox/exam
         ScrollSpyDocsComponent,
         ScrollSpyExampleComponent,
         ScrollSpyCustomExampleComponent,
+        SelectExampleComponent,
+        SelectFormGroupExampleComponent,
+        SelectInlineHelpExampleComponent,
+        SelectStateExampleComponent,
         SearchInputExampleComponent,
         SearchInputAsyncExampleComponent,
         SearchInputDynamicExampleComponent,
@@ -550,6 +584,10 @@ import { ComboboxTemplateExampleComponent } from './component-docs/combobox/exam
         TabNavigationExampleChildFirst,
         TabNavigationExampleChildSecond,
         TabNavigationExampleChildThird,
+        TextareaExampleComponent,
+        TextareaFormGroupExampleComponent,
+        TextareaInlineHelpExampleComponent,
+        TextareaStateExampleComponent,
         TileActionsExampleComponent,
         TileDisabledExampleComponent,
         TileExampleComponent,
@@ -622,6 +660,7 @@ import { ComboboxTemplateExampleComponent } from './component-docs/combobox/exam
         InfiniteScrollHeaderComponent,
         InlineHelpHeaderComponent,
         InputGroupHeaderComponent,
+        InputHeaderComponent,
         ListHeaderComponent,
         LoadingSpinnerHeaderComponent,
         MenuHeaderComponent,
@@ -633,10 +672,12 @@ import { ComboboxTemplateExampleComponent } from './component-docs/combobox/exam
         PopoverDirectiveHeaderComponent,
         ScrollSpyHeaderComponent,
         SearchInputHeaderComponent,
+        SelectHeaderComponent,
         ShellbarDocsHeaderComponent,
         SideNavigationHeaderComponent,
         TableDocsHeaderComponent,
         TabsHeaderComponent,
+        TextareaHeaderComponent,
         TileDocsHeaderComponent,
         TimeHeaderComponent,
         TimePickerHeaderComponent,

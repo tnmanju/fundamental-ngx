@@ -92,6 +92,12 @@ import {
     TabNavigationExampleChildFirst,
     TabNavigationExampleChildSecond, TabNavigationExampleChildThird
 } from './component-docs/tabs/examples/tab-navigation-children/tab-navigation-children';
+import { InputHeaderComponent } from './component-docs/input/input-header/input-header.component';
+import { InputDocsComponent } from './component-docs/input/input-docs.component';
+import { SelectHeaderComponent } from './component-docs/select/select-header/select-header.component';
+import { SelectDocsComponent } from './component-docs/select/select-docs.component';
+import { TextareaHeaderComponent } from './component-docs/textarea/textarea-header/textarea-header.component';
+import { TextareaDocsComponent } from './component-docs/textarea/textarea-docs.component';
 
 export const ROUTES: Routes = [
     {
@@ -189,6 +195,11 @@ export const ROUTES: Routes = [
                     { path: 'api', component: ApiComponent, data: {content: API_FILES.inlineHelp}}
                 ]
             },
+            { path: 'input', component: InputHeaderComponent, children: [
+                    { path: '', component: InputDocsComponent},
+                    { path: 'api', component: ApiComponent, data: {content: API_FILES.inputGroup}}
+                ]
+            },
             { path: 'inputGroup', component: InputGroupHeaderComponent, children: [
                     { path: '', component: InputGroupDocsComponent},
                     { path: 'api', component: ApiComponent, data: {content: API_FILES.inputGroup}}
@@ -244,6 +255,11 @@ export const ROUTES: Routes = [
                     { path: 'api', component: ApiComponent, data: {content: API_FILES.popoverDirective}}
                 ]
             },
+            { path: 'select', component: SelectHeaderComponent, children: [
+                    { path: '', component: SelectDocsComponent},
+                    { path: 'api', component: ApiComponent, data: {content: API_FILES.form}}
+                ]
+            },
             { path: 'scroll-spy', component: ScrollSpyHeaderComponent, children: [
                     { path: '', component: ScrollSpyDocsComponent},
                     { path: 'api', component: ApiComponent, data: {content: API_FILES.scrollSpy}}
@@ -283,6 +299,11 @@ export const ROUTES: Routes = [
                         ]
                     },
                     { path: 'api', component: ApiComponent, data: {content: API_FILES.tabs }}
+                ]
+            },
+            { path: 'textarea', component: TextareaHeaderComponent, children: [
+                    { path: '', component: TextareaDocsComponent},
+                    { path: 'api', component: ApiComponent, data: {content: API_FILES.form}}
                 ]
             },
             { path: 'tile', component: TileDocsHeaderComponent, children: [
